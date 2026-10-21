@@ -21,4 +21,4 @@ Work in progress. Currently on **PT1**.
 3. Start Laragon and open `http://localhost/web-dev-project1`
 
 ## Author
-Ziq, UKM
+Haziq
