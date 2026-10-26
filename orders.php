@@ -37,18 +37,18 @@ ob_start();
                     <label for="staff_num" class="form-label">Staff <span class="text-danger" aria-hidden="true">*</span></label>
                     <select name="staff_num" id="staff_num" class="form-control" required>
                         <option value="">Select Staff</option>
-                        <option value="S001">S001 - Ahmad Faiz</option>
+                        <option value="S001">S001 - Drew Starkey</option>
                         <option value="S002">S002 - Nurul Aina</option>
-                        <option value="S003">S003 - Tan Wei Ming</option>
+                        <option value="S003">S003 - Ahmad Iqbal</option>
                     </select>
                 </div>
                 <div class="col-md-4">
                     <label for="customer_num" class="form-label">Customer <span class="text-danger" aria-hidden="true">*</span></label>
                     <select name="customer_num" id="customer_num" class="form-control" required>
                         <option value="">Select Customer</option>
-                        <option value="C001">C001 - Ahmad Faiz</option>
-                        <option value="C002">C002 - Nurul Aina</option>
-                        <option value="C003">C003 - Tan Wei Ming</option>
+                        <option value="C001">C001 - Anya Taylor</option>
+                        <option value="C002">C002 - Muhd Ammar</option>
+                        <option value="C003">C003 - Nurin Alya</option>
                     </select>
                 </div>
             </div>
@@ -99,43 +99,11 @@ ob_start();
                 <tbody>
                     <tr>
                         <td>O001</td>
-                        <td>2026-10-01</td>
-                        <td>Ahmad Faiz</td>
-                        <td>Nurul Aina</td>
-                        <td>
-                            <a href="order_details.php" class="btn btn-sm btn-info text-white" title="Order details"><i class="bi bi-list"></i></a>
-                            <a href="invoice.php" class="btn btn-sm btn-success" title="View invoice"><i class="bi bi-receipt"></i></a>
-                            <a href="#" class="btn btn-sm btn-warning">
-                                <i class="bi bi-pencil"></i>
-                            </a>
-                            <a href="#" class="btn btn-sm btn-danger">
-                                <i class="bi bi-trash"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>O002</td>
-                        <td>2026-10-08</td>
-                        <td>Nurul Aina</td>
-                        <td>Tan Wei Ming</td>
-                        <td>
-                            <a href="order_details.php" class="btn btn-sm btn-info text-white" title="Order details"><i class="bi bi-list"></i></a>
-                            <a href="invoice.php" class="btn btn-sm btn-success" title="View invoice"><i class="bi bi-receipt"></i></a>
-                            <a href="#" class="btn btn-sm btn-warning">
-                                <i class="bi bi-pencil"></i>
-                            </a>
-                            <a href="#" class="btn btn-sm btn-danger">
-                                <i class="bi bi-trash"></i>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>O003</td>
                         <td>2026-10-15</td>
-                        <td>Tan Wei Ming</td>
-                        <td>Ahmad Faiz</td>
+                        <td>Anya Taylor</td>
+                        <td>Drew Starkey</td>
                         <td>
-                            <a href="order_details.php" class="btn btn-sm btn-info text-white" title="Order details"><i class="bi bi-list"></i></a>
+                            <a href="ordersdetails.php" class="btn btn-sm btn-info text-white" title="Order details"><i class="bi bi-list"></i></a>
                             <a href="invoice.php" class="btn btn-sm btn-success" title="View invoice"><i class="bi bi-receipt"></i></a>
                             <a href="#" class="btn btn-sm btn-warning">
                                 <i class="bi bi-pencil"></i>

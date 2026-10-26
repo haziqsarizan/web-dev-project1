@@ -31,13 +31,13 @@ ob_start();
         <div class="row mb-4">
             <div class="col-md-6">
                 <strong>Customer</strong><br>
-                Alice Johnson<br>
+                Anya Taylor<br>
                 012-3456789
             </div>
             <div class="col-md-6 text-md-end">
                 <strong>Staff</strong><br>
-                Jane Smith<br>
-                janesmith@example.com
+                Drew Starkey<br>
+                drewstarkey@gmail.com
             </div>
         </div>
         <div class="table-responsive">
@@ -54,14 +54,14 @@ ob_start();
                 <tbody>
                     <tr>
                         <td>1</td>
-                        <td>Road Bike</td>
-                        <td>$1,200.00</td>
+                        <td>Peet's French Decaf</td>
+                        <td>RM48.00</td>
                         <td>1</td>
-                        <td class="text-end">$1,200.00</td>
+                        <td class="text-end">RM48.00</td>
                     </tr>
                     <tr><td colspan="5" class="text-center">No products added to this order</td></tr>
                 </tbody>
-                <tfoot><tr><th colspan="4" class="text-end">Grand Total</th><th class="text-end">$1,200.00</th></tr></tfoot>
+                <tfoot><tr><th colspan="4" class="text-end">Grand Total</th><th class="text-end">RM48.00</th></tr></tfoot>
             </table>
         </div>
         <a href="order_details.php" class="btn btn-secondary d-print-none"><i class="bi bi-arrow-left me-1"></i>Back to Details</a>

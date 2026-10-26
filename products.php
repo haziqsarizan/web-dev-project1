@@ -45,38 +45,35 @@ ob_start();
                     <label for="brand" class="form-label">Brand <span class="text-danger" aria-hidden="true">*</span></label>
                     <select name="product_brand" id="brand" class="form-select" required>
                         <option value="">Select Brand</option>
-                        <option value="Cervelo">Cervelo</option>
-                        <option value="Geometric">Geometric</option>
-                        <option value="Tecc">Tecc</option>
-                        <option value="Nosh">Nosh</option>
+                        <option value="Blanchard's">Blanchard's</option>
+                        <option value="Peet's">Peet's</option>
+                        <option value="Fireside">Fireside</option>
                     </select>
                 </div>
  
                 <div class="col-md-3">
-                    <label for="product_condition" class="form-label">Condition <span class="text-danger" aria-hidden="true">*</span></label>
-                    <select name="product_condition" id="product_condition" class="form-select" required>
-                        <option value="">Select Condition</option>
-                        <option value="New">New</option>
-                        <option value="Used">Used</option>
+                    <label for="product_roast" class="form-label">Roast Level <span class="text-danger" aria-hidden="true">*</span></label>
+                    <select name="product_roast" id="product_roast" class="form-select" required>
+                        <option value="">Select Roast Level</option>
+                        <option value="Light">Light</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Medium-Dark">Medium-Dark</option>
+                        <option value="Dark">Dark</option>
                     </select>
                 </div>
  
                 <div class="col-md-3">
-                    <label for="year" class="form-label">Manufacturing Year <span class="text-danger" aria-hidden="true">*</span></label>
-                    <select name="product_year" id="year" class="form-select" required>
-                        <option value="">Select Year</option>
-                        <option value="2020">2020</option>
-                        <option value="2021">2021</option>
-                        <option value="2022">2022</option>
-                        <option value="2023">2023</option>
-                        <option value="2024">2024</option>
-                        <option value="2025">2025</option>
-                        <option value="2026">2026</option>
+                    <label for="pack_size" class="form-label">Pack Size <span class="text-danger" aria-hidden="true">*</span></label>
+                    <select name="product_pack_size" id="pack_size" class="form-select" required>
+                        <option value="">Select Pack Size</option>
+                        <option value="250g">250 g</option>
+                        <option value="500g">500 g</option>
+                        <option value="1kg">1 kg</option>
                     </select>
                 </div>
                  
                 <div class="col-md-3">
-                    <label for="quantity" class="form-label">Quantity <span class="text-danger" aria-hidden="true">*</span></label>
+                    <label for="quantity" class="form-label">Stock (bags) <span class="text-danger" aria-hidden="true">*</span></label>
                     <input name="product_quantity" id="quantity" type="number" class="form-control" placeholder="Enter Quantity" value="" required min="0">
                 </div>
                 <div class="col-md-3">
@@ -131,9 +128,9 @@ ob_start();
                 <tbody>
                     <tr>
                         <td>P001</td>
-                        <td>Road Bike</td>
-                        <td>$1,200.00</td>
-                        <td>Cervelo</td>
+                        <td>Peet's French Decaf</td>
+                        <td>RM48.00</td>
+                        <td>Peet's</td>
                         <td>
                             <a href="#" class="btn btn-sm btn-warning">
                                 <i class="bi bi-pencil"></i>

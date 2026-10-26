@@ -1,8 +1,8 @@
       <div id="mySidebar" class="col-auto bg-dark text-white offcanvas-lg offcanvas-start">
         <div class="p-4">
-          <a href="#" class="navbar-brand">
+          <a href="home.php" class="navbar-brand">
             <div class="row">
-              <h5 class="">My Company</h5>
+              <h5 class="">ZEcafé & Co.</h5>
             </div>
           </a>
  
@@ -10,38 +10,38 @@
            
           <ul class="mynav nav nav-pills flex-column">
             <li class="nav-item mb-3 mt-2">
-              <a href="" class="text-decoration-none text-white">
+              <a href="home.php" class="text-decoration-none text-white">
                 <i class="bi bi-house-fill me-2"></i>
                 Home
               </a>
             </li>
             <li class="nav-item mb-3">
-              <a href="" class="text-decoration-none text-white">
+              <a href="dashboard.php" class="text-decoration-none text-white">
                 <i class="bi bi-bar-chart-line-fill me-2"></i>
                 Dashboard
               </a>
             </li>
             <li class="nav-item mb-3">
-              <a href="" class="text-decoration-none text-white">
+              <a href="products.php" class="text-decoration-none text-white">
                 <i class="bi bi-box-seam-fill me-2"></i>
                 Products
               </a>
             </li>
             <li class="nav-item mb-3">
-              <a href="" class="text-decoration-none text-white">
+              <a href="customers.php" class="text-decoration-none text-white">
                 <i class="bi bi-people-fill me-2"></i>
                 Customers
               </a>
             </li>
             <li class="nav-item mb-3">
-              <a href="" class="text-decoration-none text-white">
+              <a href="staffs.php" class="text-decoration-none text-white">
                 <i class="bi bi-person-workspace me-2"></i>
                 Staffs
               </a>
             </li>
             <li class="nav-item mb-3">
-              <a href="" class="text-decoration-none text-white">
-                <i class="bi bi-receipt me-2"></i>
+              <a href="orders.php" class="text-decoration-none text-white">
+                <i class="bi bi-cart me-2"></i>
                 Orders
               </a>
             </li>
