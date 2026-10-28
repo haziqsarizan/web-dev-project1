@@ -64,12 +64,21 @@ ob_start();
                 <tfoot><tr><th colspan="4" class="text-end">Grand Total</th><th class="text-end">RM48.00</th></tr></tfoot>
             </table>
         </div>
-        <a href="order_details.php" class="btn btn-secondary d-print-none"><i class="bi bi-arrow-left me-1"></i>Back to Details</a>
+        <a href="ordersdetails.php" class="btn btn-secondary d-print-none"><i class="bi bi-arrow-left me-1"></i>Back to Details</a>
     </div>
 </div>
 
 <style>
+@page {
+    margin: 0;
+}
+
 @media print {
+
+    body {
+            padding: 1.5cm;
+    }
+
     /* Hide sidebar, burger header, print button and back button */
     .sidebar, #sidebar, #sidebarMenu, aside,
     .navbar, header, .burger, .burger-btn, .menu-toggle, .navbar-toggler,

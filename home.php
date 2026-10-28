@@ -1,10 +1,18 @@
 <?php
 // Sample data, same fields as your products form. Replace with a DB query later.
 $featured = [
-    ['product_num' => 'P001', 'name' => 'Blanchard\'s Arabica Decaf',   'roast' => 'Medium Roast',      'price' => 42.00, 'image' => 'images/medium.jpg'],
-    ['product_num' => 'P002', 'name' => 'Peet\'s French Decaf', 'roast' => 'Dark Roast',        'price' => 48.00, 'image' => 'images/darkroast.jpg'],
-    ['product_num' => 'P003', 'name' => 'Fireside Decaf',     'roast' => 'Light Roast',       'price' => 45.00, 'image' => 'images/light.jpg'],
+    ['product_num' => 'P001', 'name' => 'Blanchard\'s Arabica Decaf', 'roast' => 'Medium Roast', 'price' => 42.00],
+    ['product_num' => 'P002', 'name' => 'Peet\'s French Decaf',        'roast' => 'Dark Roast',   'price' => 48.00],
+    ['product_num' => 'P003', 'name' => 'Fireside Decaf',              'roast' => 'Light Roast',  'price' => 45.00],
 ];
+
+// Roast level: how many bean icons are filled (out of 3)
+$roastLevels = [
+    'Light Roast'  => 1,
+    'Medium Roast' => 2,
+    'Dark Roast'   => 3,
+];
+
 
 ob_start();
 ?>
@@ -12,7 +20,7 @@ ob_start();
 <!-- ================= WELCOME ================= -->
 <div class="card shadow border-0 border-start border-5 border-primary mb-4">
     <div class="card-body">
-        <h2 class="mb-1"><i class="bi bi-cup-hot-fill text-primary me-2"></i>Welcome to Decaf Beans Co.</h2>
+        <h2 class="mb-1"><i class="bi bi-cup-hot-fill text-primary me-2"></i>Welcome to ZEcafé & Co.</h2>
         <p class="text-muted mb-0">Whole bean decaf coffee: all the flavour, none of the jitters.</p>
     </div>
 </div>
@@ -61,37 +69,7 @@ ob_start();
     </div>
 </div>
 
-<!-- ================= WHY OUR DECAF ================= -->
-<div class="card shadow-sm mb-4">
-    <div class="card-body">
-        <div class="row align-items-center mb-3">
-            <div class="col">
-                <h5 class="mb-0"><i class="bi bi-star text-primary me-2"></i>Why Our Decaf?</h5>
-                <small class="text-muted">What makes our coffee different</small>
-            </div>
-        </div>
-        <hr>
-        <div class="row g-3 text-center">
-            <div class="col-md-4">
-                <i class="bi bi-droplet-half text-primary fs-1"></i>
-                <h6 class="mt-2">Water-Processed</h6>
-                <p class="text-muted mb-0">Caffeine is removed without harsh chemicals.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-flower1 text-primary fs-1"></i>
-                <h6 class="mt-2">Whole Bean Freshness</h6>
-                <p class="text-muted mb-0">Stays fresh longer and you choose your grind size.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-moon-stars text-primary fs-1"></i>
-                <h6 class="mt-2">Sleep-Friendly</h6>
-                <p class="text-muted mb-0">Enjoy a full-bodied cup in the evening.</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- ================= FEATURED PRODUCTS ================= -->
+<!-- ================= FEATURED PRODUCTS  ================= -->
 <div class="card shadow-sm mb-4">
     <div class="card-body">
         <div class="row align-items-center mb-3">
@@ -108,63 +86,27 @@ ob_start();
             <?php foreach ($featured as $p): ?>
             <div class="col-md-4">
                 <div class="card h-100 shadow-sm">
-                    <img src="<?= htmlspecialchars($p['image']) ?>" class="card-img-top"
-                         style="height:300px; object-fit:cover;"
-                         alt="<?= htmlspecialchars($p['name']) ?>"
-                         onerror="this.src='https://placehold.co/400x200?text=Coffee'">
                     <div class="card-body text-center">
                         <span class="badge bg-secondary mb-2"><?= htmlspecialchars($p['roast']) ?></span>
                         <h5 class="card-title"><?= htmlspecialchars($p['name']) ?></h5>
-                        <p class="fw-bold text-primary mb-3">RM <?= number_format($p['price'], 2) ?></p>
-                        <a href="#" class="btn btn-sm btn-primary">View Details</a>
+
+                        <!-- Product ID + roast level icons side by side -->
+                        <p class="text-muted small mb-2" title="<?= htmlspecialchars($p['roast']) ?>">
+                            <?= htmlspecialchars($p['product_num']) ?>
+                            <span class="ms-2">
+                                <?php $level = $roastLevels[$p['roast']] ?? 0; ?>
+                                <?php for ($i = 1; $i <= 3; $i++): ?>
+                                    <i class="bi bi-egg-fill <?= $i <= $level ? 'text-primary' : 'text-secondary opacity-25' ?>"
+                                       style="display:inline-block; transform: rotate(45deg);"></i>
+                                <?php endfor; ?>
+                            </span>
+                        </p>
+
+                        <p class="fw-bold text-primary mb-0">RM <?= number_format($p['price'], 2) ?></p>
                     </div>
                 </div>
             </div>
             <?php endforeach; ?>
-        </div>
-    </div>
-</div>
-
-<!-- ================= BREW GUIDE ================= -->
-<div class="card shadow-sm mb-4">
-    <div class="card-body">
-        <div class="row align-items-center mb-3">
-            <div class="col">
-                <h5 class="mb-0"><i class="bi bi-cup-hot text-primary me-2"></i>Brew It Right</h5>
-                <small class="text-muted">Three simple steps for a better cup</small>
-            </div>
-            <div class="col-auto">
-                <span class="badge bg-success">3 steps</span>
-            </div>
-        </div>
-        <hr>
-        <div class="table-responsive">
-            <table class="table table-striped table-hover mb-0">
-                <thead class="table-dark">
-                    <tr>
-                        <th>Step</th>
-                        <th>Title</th>
-                        <th>Tip</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Grind Fresh</td>
-                        <td>Medium for drip, coarse for French press.</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Right Ratio</td>
-                        <td>About 15 g of coffee per 250 ml of water.</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Water Temperature</td>
-                        <td>92–96°C. Let boiling water rest for 30 seconds.</td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
     </div>
 </div>
