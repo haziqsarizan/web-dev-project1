@@ -1,9 +1,11 @@
       <div id="mySidebar" class="col-auto bg-dark text-white offcanvas-lg offcanvas-start">
         <div class="p-4">
-          <a href="home.php" class="navbar-brand">
-            <div class="row">
-              <h5 class="">ZEcafé & Co.</h5>
-            </div>
+          <a href="home.php" class="navbar-brand d-flex align-items-center">
+              <div class="rounded-circle bg-secondary d-flex justify-content-center align-items-center"
+                style="width: 50px; height: 50px;">
+                <i class="bi bi-cup-hot text-white fs-4"></i>
+              </div>
+            <h5 class="mb-0 ms-2">ZEcafé &amp; Co.</h5>
           </a>
  
           <hr>
@@ -35,13 +37,13 @@
             </li>
             <li class="nav-item mb-3">
               <a href="staffs.php" class="text-decoration-none text-white">
-                <i class="bi bi-person-workspace me-2"></i>
+                <i class="bi bi-person-badge-fill me-2"></i>
                 Staffs
               </a>
             </li>
             <li class="nav-item mb-3">
               <a href="orders.php" class="text-decoration-none text-white">
-                <i class="bi bi-cart me-2"></i>
+                <i class="bi bi-cart-fill me-2"></i>
                 Orders
               </a>
             </li>
